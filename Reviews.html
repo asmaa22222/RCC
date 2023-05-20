@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODC-camping shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link rel="shortcut icon" type="img/jpg" href="img/logo.JPG"/>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+<header>
+<a href="index.html"><img src="img/logo.png" class="logo" width="100px"></a>
+		<div>
+			<ul id="navbar">
+			   <li><a class="active" href="index.html">Home</a></li> 
+			   <li><a href="Camping-Equipment.html">Equipement</a> </li>
+			   <li><a href="Furniture.html">Furniture</a> </li>
+			   <li><a href="Reviews.html"> Reviews</a> </li>
+			   <li><a href="Offers.html">Offers</a></li>
+			   <li><a href="cart.html"> <i class="fa-sharp fa-solid fa-bag-shopping"></i></a></li>
+			</ul>
+		</div>
+		<div id="mobile">
+			<i id="bar" class="fas fa-outdent"></i>
+		</div>
+		<nav>
+			<input id="search-panel" type="text" name="search" placeholder="Search..">
+
+		</nav>
+</header>
+
+
+<header>
+    <h1 id="customer">Customer Reviews</h1>
+  </header>
+
+<section>
+    <div class="customer">
+        <img src="img1/person1.jpeg" alt=" Customer ">
+        <div>
+          <p class="name">Ahmad Ali</p>
+          <p class="review">I recently purchased camping gear from your store and I'm extremely satisfied. The quality is top-notch and the products are durable. Can't wait for my next camping trip!</p>
+
+          <div class="rating">
+            <input type="radio" id="star1" name="rating1" value="1">
+            <label for="star1"></label>
+            <input type="radio" id="star2" name="rating1" value="2">
+            <label for="star2"></label>
+            <input type="radio" id="star3" name="rating1" value="3">
+            <label for="star3"></label>
+          </div>
+        </div>
+      </div>
+      <div class="customer">
+        <img src="img1/person4.jpeg" alt=" Customer">
+        <div>
+          <p class="name"> John Doe</p>
+          <p class="review">The camping products are amazing and of high quality. Highly recommended.</p>
+
+          <div class="rating">
+            <input type="radio" id="star1" name="rating1" value="1">
+            <label for="star1"></label>
+            <input type="radio" id="star2" name="rating1" value="2">
+            <label for="star2"></label>
+            <input type="radio" id="star3" name="rating1" value="3">
+            <label for="star3"></label>
+            <input type="radio" id="star4" name="rating1" value="4">
+            <label for="star4"></label>
+            <input type="radio" id="star5" name="rating1" value="5">
+            <label for="star5"></label>
+          </div>
+        </div>
+      
+        <div class="customer">
+            <img src="img1/personal3.jpg" alt="customer ">
+            <div>
+              <p class="name"> Adam Jordan</p>
+              <p class="review">The camping experience with these products was fantastic. Excellent quality and performance.</p>
+              <div class="rating">
+                <input type="radio" id="star1" name="rating1" value="1">
+                <label for="star1"></label>
+                <input type="radio" id="star2" name="rating1" value="2">
+                <label for="star2"></label>
+                <input type="radio" id="star3" name="rating1" value="3">
+                <label for="star3"></label>
+                <input type="radio" id="star4" name="rating1" value="4">
+                <label for="star4"></label>
+              </div>
+        </div>
+      
+            <div class="customer">
+                <img src="img1/person girl2.jpg" alt=" customer">
+                <div>
+                  <p class="name"> Jasmen Omar</p>
+                  <p class="review">I didn't expect camping to be this easy. Wonderful and very useful products.</p>
+                  <div class="rating">
+                    <input type="radio" id="star1" name="rating1" value="1">
+                    <label for="star1"></label>
+                    <input type="radio" id="star2" name="rating1" value="2">
+                    <label for="star2"></label>
+                    <input type="radio" id="star4" name="rating1" value="4">
+                    <label for="star4"></label>
+                    <input type="radio" id="star5" name="rating1" value="5">
+                    <label for="star5"></label>
+                  </div>
+                </div>
+              
+</section>
+
+
+
+<section id="sentence1">
+  <p> "Dear valued customer, we value your feedback! Please take a moment to share your thoughts and experiences by writing a review below. We appreciate your input and it will help us improve our services. Thank you for your time and support!"</p>
+</section>
+
+ <section class="customers-section">
+    <h2>Customer Section</h2> 
+    
+    <div id="customers-container"></div>
+    
+    <button  id="NewCustomer" onclick="addCustomer()">New Customer  </button>
+    
+    <script>
+      function addCustomer() {
+        var container = document.getElementById('customers-container');
+        
+        var customerDiv = document.createElement('div');
+        customerDiv.className = 'customer';
+        
+        var nameInput = document.createElement('input');
+        nameInput.type = 'text';
+        nameInput.placeholder = ' Name';
+        
+        var feedbackTextarea = document.createElement('textarea');
+        feedbackTextarea.rows = '4';
+        feedbackTextarea.cols = '50';
+        feedbackTextarea.placeholder = 'Your Opinion';
+        
+        var emailInput = document.createElement('input');
+        emailInput.type = 'email';
+        emailInput.placeholder = ' Yoyr E-mail';
+        
+        var imageInput = document.createElement('input');
+        imageInput.type = 'file';
+        imageInput.accept = 'image/*';
+
+        
+        var ratingStarsDiv = document.createElement('div');
+        ratingStarsDiv.className = 'rating-stars';
+        
+        for (var i = 1; i <= 5; i++) {
+          var radioInput = document.createElement('input');
+          radioInput.type = 'radio';
+          radioInput.id = 'rating-' + i;
+          radioInput.name = 'rating';
+          radioInput.value = i;
+          
+          var label = document.createElement('label');
+          label.htmlFor = 'rating-' + i;
+          
+          ratingStarsDiv.appendChild(radioInput);
+          ratingStarsDiv.appendChild(label);
+        }
+        
+        customerDiv.appendChild(nameInput);
+        customerDiv.appendChild(feedbackTextarea);
+        customerDiv.appendChild(emailInput);
+        customerDiv.appendChild(imageInput);
+        customerDiv.appendChild(ratingStarsDiv);
+        
+        container.appendChild(customerDiv);
+      }
+    </script>
+  </section>
+
+
+<section id="sentence1">
+<p>"We greatly appreciate your feedback on our website!"</p>  
+</section>
+  
+
+
+
+
+<footer class="section-p1">
+	
+  <div class="col">
+  <img  class="logo"   src="img/logo.png" class="logo" width="100px">
+  <h4>Contact</h4>
+  <p><strong>Address:</strong> 562 Shaikh Zaid street,Abudhabi</p>
+  <p><strong>Phone:</strong> 00971-503125003</p>
+  <p><strong>Hours:</strong> 10:00 - 18:00, Mon - Sat</p>
+
+  <div class="follow">
+    <h4>Follow us</h4>
+    <div class="icon">
+      <i class="fa-brands fa-facebook-f"></i>			
+      <i class="fa-brands fa-twitter"></i>
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-pinterest-p"></i>
+      <i class="fa-brands fa-youtube"></i>
+    </div>
+  </div>
+</div>
+<div class="col">
+  <h4>About</h4>
+  <a href="About us.html"> About us</a>
+  <a href="Privacy Policy.html"> Privacy Policy</a>
+  <a href="Help.html"> Help</a>
+</div>
+<div class="col">
+  <h4>My Account</h4>
+  <a href="Sign In.html">Sign In</a>
+  <a href="Cart.html"> My Cart</a>
+
+  <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7460.125385292363!2d55.27494394080182!3d25.205015182434803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0xbde66e5084295162!2z2K_YqNmK!5e0!3m2!1sar!2sae!4v1683477812680!5m2!1sar!2sae"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+</div>
+<div class="col install">
+  <h4>Install App</h4>
+  <p>From App Store or Google Play</p>
+  <div class="row">
+    <img src="img/applestore.jpg" id="footerimages">
+    <img src="img/googleplay.jpg" id="footerimages">
+  </div>
+  <p>Secured Payment Gateways</p>
+  <img src="img/pay.JPG">
+</div>
+<div class="copyright">
+  <p>&copy; 2023 ODC -Asmaa Mohammad| All Rights Reserved.</p>
+
+</div>
+
+</footer>
+
+
+
+<script src="script.js"></script>
+<script src="swiper.min.js"></script>
+
+</body>
+</html>

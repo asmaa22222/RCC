@@ -1,0 +1,1090 @@
+@import url(https://fonts.google.com/specimen/Castoro+Titling);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: #353030;
+}
+
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+
+}
+
+h4{
+    font-size: 20px;
+    columns: #493535;
+    margin-left: 30px;
+    margin-bottom: 20px;
+
+}
+h6{
+    font-size: 12px;
+    font-weight: 700;
+}
+p{
+    font-size: 16px;
+    margin: 20px 0 20px 0;
+    margin-bottom: 20px;
+
+}
+.section-p1{
+    padding: 40px 80px;
+}
+
+.section-m1{
+    margin: 40px;
+}
+
+body{
+    width: 100%;
+}
+/*header start.....................................................*/
+
+#navbar{
+display: flex;
+align-items:flex-end;
+justify-content: space-between;
+padding: 15px 60px;
+background:#d2e9e9;
+box-shadow: 0 5px 10px rgba(0,0,0,0.06);
+z-index: 999;
+position:sticky;
+top: 0;
+left:0;
+}
+
+#navbar li{
+    list-style:none;
+    padding: 0 8px;
+    position: relative;
+    float: left;
+    display: flex;
+    justify-content: center;
+}
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+}
+#navbar li a:hover,
+#navbar li a.active{
+    color: #088178;
+}
+#navbar li a.active::after,
+#navbar li a:hover::after
+{
+    content: "";
+    width: 40px;
+    height: 4px;
+    background:#088178 ;
+    position: absolute;
+    bottom: -6px; 
+    left: 10px;
+}
+
+/*....advertisment............*/
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+
+}
+
+.overlay img{
+width: 100%;
+}
+
+.popup {
+  background-color: #fff;
+  padding: 20px;
+  max-width: 500px;
+  text-align: center;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  cursor: pointer;
+  color:black;
+}
+
+
+
+/*.......slide show..........................................*/
+.mySlides{width: 100%;
+border:#088178 50px;
+margin-top: 50px;
+}
+
+
+
+/*...search pannel................................................*/
+#search-panel {
+  border: #088178;
+  border-radius: 20px;
+  background-color: #d0d6da;
+  width: 150px;
+  -webkit-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+  text-align: center;
+  font-size: 20px;
+  padding: 3px;
+  margin: 20px;
+  position:sticky;
+  
+}
+#search-panel:focus {
+  width: 40%;
+}
+
+
+/* home page...................................................................................*/
+#slideshow{
+    border: #088178;
+    border-color: #088178;
+    border-width: 10px;
+    transition:all 1s ease;
+}
+/*...hero paragraph.............................................................................*/
+#hero{
+    background-image: url(img/camping\ hero.jpg);
+    width: 100%;
+    height: 110vh;
+    background-size: cover;
+    background-position: center;
+    padding:150px 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+#hero button{
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 15px;
+  color: #000;
+  background-color: white;
+  border-radius: 6px;
+  cursor:pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+  margin-top: 15px;
+}
+
+
+#hero button:hover{
+  background-color: #b1cfcd;
+  color: #fff;
+}
+
+#hero h4{
+  color: #15141f;
+}
+
+#hero h2{
+  color: rgb(41, 42, 46);
+}
+
+#hero h1{
+  color: rgb(250, 255, 250);
+}
+
+
+
+#sentence1{
+  font-size:60px;
+  font-weight: bold;
+  flex:content;
+  color: white;
+  background-color: #58a09b;
+  text-align:center;
+  padding: 10px;
+
+}
+
+
+  /*privacy policy..........................................................................*/
+  #Privacy-Policy{
+    padding: 20px;
+  margin-top: 20px;
+  }
+  #Privacy-Policy h1{
+    font-size: 30px;
+    color: #1a1a1a;
+  }
+
+  #Privacy-Policy h2{
+    font-size: 25px;
+    color: #1a1a1a;
+    padding: 20px;
+    text-underline-position:below;
+  }
+  #Privacy-Policy p{
+    font-size: 20px;
+    color: #424040;
+    padding: 30px;
+    line-height: 30px;
+    margin-top: 20px;
+  }
+  
+
+
+/*.Help............................................................................*/
+#Help{
+
+  font: size 15px;
+  padding: 20px;
+}
+#p1{
+  font-size: 20px;
+  padding: 20px;margin: 20px;
+  border: 3px bold #088178;
+  display: inline-block;
+  color: #0a0a0a;
+  text-indent: 20px;
+  background-color: #dcdce7;
+  border-style: solid;
+  border-color: #088178;
+  line-height: 40px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+}
+
+textarea {
+  height: 100px;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.question {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.login-form {
+  margin-top: 50px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+
+/*.......banner offer....................................................................*/
+#banner{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url(img/camping\ offer1.jpg);
+  width: 100%;
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+}
+#banner h4{
+  color: white;
+  font-size: 20px;
+}
+#banner h2{
+  color: white;
+  font-size: 50px;
+  padding: 50px 0;
+}
+#banner h2 span{
+  color: red;
+  font-size: 50px;
+  padding: 50px 0;
+}
+#button.offer{
+
+  font-size: 20px;
+  font-weight: 600;
+  padding: 20px 40px;
+  color: #000;
+  background-color: white;
+  border-radius: 6px;
+  cursor:pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+}
+#banner button:hover{
+  background-color: #088178;
+  color: #fff;
+}
+
+
+
+
+
+/*....product 2 ........................................*/
+#product2{
+  text-align:left;
+}
+
+#product2 .pro-container2{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  flex-wrap: wrap;
+  
+}
+
+#product2 .proo{
+  width: 23%;
+  min-width: 250px;
+  padding: 17px;
+  border: 1px solid #cce7d0;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.03);
+  margin: 20px 0;
+  transition: 0.2s ease;
+  position: relative;
+}
+#product2 h2{
+  font-size: 30px;
+}
+#product2 .proo:hover{
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.03);
+}
+#product2 .proo img{
+  width: 80%;
+  border-radius: 20px;
+}
+#product2 .proo .dess span{
+  color:#606063 ;
+  font-size: 12px;
+}
+#product2 .proo .dess h5{
+  padding-top: 10px;
+  color:#1a1a1a ;
+  font-size: 18px;
+}
+#carticon{
+width: 1px;
+height: 1px;
+}
+#product2 .proo .dess h4{
+  padding-top: 7px;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #088178;
+}
+#product2 .proo .fas{
+  line-height: 40px;
+  border-radius: 50px;
+  background-color: #e8f6ea;
+  font-weight: 500;
+  color:#088178;
+  border:1px solid #cce7d0;
+  position:absolute;
+  bottom: 20px;
+  right:10px ;
+}
+#ppp{
+  padding-top: 7px;
+  font-size: 25px;
+  font-weight: 700;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
+}
+ 
+#productButton .productButten{
+  font-size: 20px;
+  font-weight: 600;
+  padding: 20px 40px;
+  color: #f8f2f2;
+  background-color: rgb(48, 45, 45);
+  border-radius: 6px;
+  cursor:pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+}
+#productButton:hover{
+background-color: #088178;
+color: #fff;
+}
+
+del{
+  text-decoration-color: red;
+}
+
+
+
+/* about us ..................................................................................................*/
+#about-us{
+padding: 20px;
+margin-top: 20px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+line-height: 30px; 
+}
+#about-us h1{
+  font-size: 40px;
+  color: #42515a;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+padding: 10px;
+}
+
+#about-us h2{
+  font-size: 30px;
+  color: #1a1a1a;
+  padding: 5px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-bottom: 10px;
+}
+#about-us p{
+  font-size: 25px;
+  color: #424040;
+  padding: 5px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-top: 10px;
+}
+/*.....banner.....................................................*/
+
+#sm-banner{
+display:flex;
+justify-content:space-between;
+flex-wrap: wrap;
+}
+
+#sm-banner .banner-box {
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+background-image: url(img/banner1.jpeg);
+min-width: 580px;
+height: 50vh;
+background-size: cover;
+background-position: center;
+padding:30px;
+flex: 1 0 50%;
+width: 100%;
+margin: 5px;
+}
+
+#sm-banner .banner-box2 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: url(img/banner3.jpeg);
+  min-width: 580px;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  padding:30px;
+  flex: 1 0 50%;
+  width: 100%;
+  margin: 5px;
+  }
+  
+
+
+
+#sm-banner h4{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+#sm-banner h2{
+  color: #fff;
+  font-size: 28px;
+  font-weight: 800;
+} 
+
+#sm-banner span{
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  padding: top 15px; ;
+} 
+
+#sm-banner button{
+  font-size: 15px;
+  font-weight: 300;
+  padding: 10px 15px;
+  color: #000;
+  background-color: white;
+  border-radius: 6px;
+  cursor:pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+  margin-top: 15px;
+}
+#sm-banner button:hover{
+  background-color: #088178;
+  color: #fff;
+}
+
+/*....News letter......................................*/
+#newsletter{
+  display:flex ;
+  justify-content: space-between;
+  flex-wrap:wrap;
+  align-items: center;
+  background-repeat: no-repeat;
+  background: position 20% 30% ;
+  margin: 10px;
+  background-color:#0e6e68;
+}
+#newsletter h4{
+  color: #fff;
+  font-size: 30px;
+  font-weight: 300;
+}
+
+#newsletter input{
+  color: #000000;
+  font-size: 28px;
+  font-weight: 800;
+} 
+input::placeholder {
+font-size: 20px;
+}
+
+
+#newsletterspan{
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  padding: top 15px; ;
+} 
+
+#newsletterbutton{
+  height: 3.125rem;
+  padding: 0  1.25em;
+  font-size: 14px;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius:4px ;
+  outline: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  margin: 5px;
+
+}
+
+#newsletter button:hover{
+  background-color: #088178;
+  color: #fff;
+}
+#newsletter p{
+  color: #fff;
+}
+#newsletter p span{
+  color: #ffbd27;
+}
+
+#newsletter .form{
+display: flex;
+width: 40%;
+}
+
+#newsletter input{
+  height: 3.125rem;
+  padding: 0  1.25em;
+  font-size: 14px;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius:4px ;
+  outline: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  margin: 5px;
+
+
+}
+#newsletter button{
+  background-color: #63b4af;
+  color: #fff;
+  white-space:nowrap;
+  height: 50px;
+  width: 100px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  margin: 5px;
+  border-color:#088178;
+}
+
+
+/*footr..........................................................................................*/
+footer{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+footer .col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom:5px ;
+  margin-top:10px;
+  color: #1a1a1a;
+
+  }
+#footerimages{
+  width: 60%;
+  height: 50px;
+}
+footer .logo{
+  margin-bottom: 30px;
+}
+
+footer h4{
+  font-size: 20px;
+  padding-bottom: 25px;
+  color: #1a1a1a;
+}
+footer p{
+  font-size: 14px;
+ margin: 0 0 8px 0 ;}
+
+footer a{
+  font-size: 16px;
+  margin: 0 0 8px 0 ;
+  text-decoration: none;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+footer .follow{
+  margin-top:20px;
+  
+}
+
+footer .follow i{
+ color:#465b52;
+ padding-right: 4px;
+}
+footer .install .row img{
+border: 1.5px solid #088178;
+border-radius: 6px;
+}
+footer .install img{
+  margin: 10px 0 15px 0;
+}
+footer .follow i:hover,
+footer a:hover{
+  color:#088178
+}
+footer .copyright{
+  width:100% ;
+  text-align:center;
+}
+footer .col{
+  color: #1a1a1a;}
+
+
+#map{
+  width:300px;
+  height:300px;
+  padding:30px;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-right: 30px;
+  border: none;
+}
+/*.....cart..................................................*/
+
+.cart-page{
+  margin:80px auto;
+}
+table{
+  width:80% ;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cart-info{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin: 5px;
+}
+th {
+  text-align: left;
+  padding: 5px;
+  color: white;
+  background-color:#088178 ;
+font-weight: normal
+}
+td{ padding: 20px 15px;}
+
+td input {
+  width: 50px;
+  height: 30px;
+  padding: 10px;
+}
+td a {
+  color:#088178;
+  font-size: 15px;
+}
+
+.equipmenttype{
+  font-size: 15px;
+  font-weight: bold;
+}
+td img{
+  width: 120px;
+  height: 120px;
+  margin-right: 10px;
+}
+.total-price{
+  display: flex;
+  justify-content:flex-end;
+}
+.total-price table{
+  border-top: 3px solid ;
+  color: #088178;
+  width: 100%;
+  max-width: 400px;
+}
+td:last-child{
+  text-align: right;
+}
+th:last-child{
+  text-align: right;
+}
+
+
+
+
+#sentence{
+  font-size: 50px;
+  font-weight: bold;
+  flex:content;
+  color: white;
+  background-color: #088178;
+  text-align:center;
+  padding: 10px;
+}
+
+/*........reviews..............................................*/
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+#customer{
+  background-color: #fff;
+  margin: 10px;
+padding: 10px;}
+
+.customer {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+  animation: fadeIn 1s ease;
+}
+
+.customer img {
+  width: 200px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+  display: flex; 
+  flex-direction: column;
+
+}
+.review{
+  width: 300px;
+  height: 100px;
+}
+.customer .name {
+  font-weight: bold;
+  animation: slideInLeft 1s ease;
+  display: flex; 
+  flex-direction: column;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  animation: slideInRight 1s ease;
+}
+
+.rating input[type="radio"] {
+  display: none;
+}
+
+.rating label {
+  font-size: 30px;
+  color: #ccc;
+  cursor: pointer;
+  animation: bounce 1s infinite;
+  color: #ffcc00;
+
+}
+
+.rating label:before {
+  content: '\2605';
+}
+
+.rating input[type="radio"]:checked ~ label {
+  color: #ffcc00;
+  animation: pulse 1s infinite;
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/*....review2 user input...............................*/
+
+.customers-section {
+  text-align: center;
+  padding: 50px;
+}
+
+.customer {
+  margin-bottom: 40px;
+padding: 20px;}
+
+input, textarea {
+  display: block;
+  margin-bottom: 10px;
+  padding: 20px;
+  width: 600px;
+  height:80px;
+  color: #088178;
+  font-size: 20px;
+  border: #000;
+  border-radius: 5px;
+
+}
+#NewCustomer{
+  width: 100px;
+  height: 50px;
+  color:white;
+  background-color:#a0acab;
+  font-size: 20px;
+  border: #15504c;
+  border-radius: 5px;
+  border-width: 2px;
+}
+
+input[type="email"] {
+  width: 300px;
+  height: 30px;
+  
+}
+
+input[type="file"] {
+  width: 300px;
+  border: #0a0a0a;
+  background-color: #d2d7db;
+  font-size: 20PX;
+  margin-top: 10PX;
+}
+
+.rating-stars {
+  display: inline-block;
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+
+.rating-stars > input[type="radio"] {
+  display: none;
+}
+
+.rating-stars > label {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+  color: #ccc;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.rating-stars > label:before {
+  content: '\2605';
+  position: absolute;
+}
+
+.rating-stars > label:hover:before,
+.rating-stars > label:hover ~ label:before,
+.rating-stars > input[type="radio"]:checked ~ label:before {
+  color: #ffcc00;
+}
+
+
+
+
+
+
+
+
+
+/* ..sign in ............................................................................*/
+
+.login-container {
+  width: 300px;
+  margin: 50PX auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-group input[type="submit"] {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+}
+
+.form-group input[type="submit"]:hover {
+  background-color: #45a049;
+}
+/*..............phone screen..................................*/
